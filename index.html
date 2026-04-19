@@ -3,51 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>cv</title>
+  <title>Cinematic Scene</title>
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Style -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div id="scene">
+
+    <!-- Camera (كل شيء يتحرك داخله) -->
     <div id="camera">
-      <img id="before-image" class="scene-image" alt="" draggable="false">
-      <img id="after-image"  class="scene-image" alt="" draggable="false">
+
+      <!-- Images -->
+      <img id="before-image" class="scene-image" alt="">
+      <img id="after-image"  class="scene-image" alt="">
+
+      <!-- Bloom reveal -->
       <div id="flower-reveal"></div>
+
+      <!-- Light layers -->
       <div id="warm-overlay"></div>
       <div id="final-glow"></div>
-      <div id="hut-flicker"></div>
       <div id="window-glow"></div>
-      <div id="dust-layer"></div>
 
-      <svg id="wind-layer" aria-hidden="true" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="wind-stroke" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%"   stop-color="#fff2dc" stop-opacity="0"    />
-            <stop offset="30%"  stop-color="#fff0d8" stop-opacity="0.34" />
-            <stop offset="62%"  stop-color="#ffdca8" stop-opacity="0.72" />
-            <stop offset="100%" stop-color="#ffc687" stop-opacity="0"    />
-          </linearGradient>
-          <filter id="wind-blur" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur stdDeviation="2.2" />
-          </filter>
-        </defs>
-        <g id="wind-group">
-          <path class="wind-path"></path>
-          <path class="wind-path"></path>
-          <path class="wind-path"></path>
-          <path class="wind-path"></path>
-        </g>
-      </svg>
-
-      <div id="silhouette"></div>
+      <!-- Minimal atmosphere -->
       <div id="vignette"></div>
+
     </div>
 
-    <div id="message">Happy Birthday dr , hope these years be the best  </div>
-    <div id="hut-hotspot" aria-hidden="true"></div>
+    <!-- Message -->
+    <div id="message">
+      Happy Birthday Dr,<br>
+      Hope these years be the best
+    </div>
+
+    <!-- Click trigger -->
+    <div id="hut-hotspot"></div>
+
   </div>
 
+  <!-- Script -->
   <script src="js/main.js"></script>
 
 </body>
